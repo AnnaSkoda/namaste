@@ -1,0 +1,393 @@
+/*------------------Шрифти------------------------------*/
+@font-face {
+    font-family:"Excon";
+    src:url("/fonts/Excon-Regular.otf");
+}
+@font-face {
+    font-family:"Ranade";
+    src:
+    url("/fonts/Ranade-Bold.otf"),
+    url("/fonts/Ranade-Medium.otf"),
+    url("/fonts/Ranade-Regular.otf");
+}
+
+:root{
+/*------------------Font-family------------------------------*/
+--ff-excon: 'Excon', sans-serif;
+--ff-ranade: 'Rosario', sans-serif;
+
+/* ------------------ Colors ------------------ */
+--color-black:#000000;
+--color-graffit: #303030;
+
+
+/* ------------------ Background ------------------ */
+--bg-cream:#FFF4EB;
+--bg-graffit:#303030;
+--bg-dark-cream:#CA9277;
+
+}
+
+/*------------------Default style------------------------------*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    min-width: 320px;
+    line-height: 1;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-style: inherit;
+}
+
+button {
+    line-height: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    color: inherit;
+    background-color: transparent;
+}
+
+/* ------------------Main style------------------------ */
+body {
+    background: #FFF4EB;
+    color: #303030;
+    font-family: var(--ff-excon);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.72px;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/*--------Налаштування адаптиву-----------------------*/
+[class*="__container"] {
+    max-width: 1230px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+/*----------Модулі-----------------------------------*/
+.title {
+    line-height: 130%;
+    font-size: 30px;
+    margin-bottom: 45px;
+}
+
+.title--dark {
+    color: #222f33;
+}
+
+@media (max-width: 47.9988em) {
+    .title {
+        font-size: 24px;
+    }
+}
+
+.text {
+    line-height: 185%;
+    margin-bottom: 45px;
+}
+
+/*---------Загальні стилі--------------------------------------------*/
+.page {
+    flex: 1 1 auto;
+}
+/*----------------------Header-------------------------*/
+.header {
+    border-bottom:  solid 0.5px #CA9277;
+}
+.header__container {
+    display: flex;
+    position: relative;
+    z-index: 2;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    min-height: 104px;
+    
+}
+
+.header__logo img {
+    width: 45px;
+}
+
+.header__cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60px;
+}
+
+
+/*------------------Main-section--------------------*/
+/* 
+.main-section {
+    position: relative;
+    display: flex;
+} */
+.page__main {
+    padding: 112px 0;
+}
+
+.main-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    
+    
+}
+
+.main-section:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    background-color: #CA9277;
+    width: 41%;
+    /* 492/1200 */
+}
+
+.main-section__container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 45px;
+}
+
+.main-section__content{
+        max-width: 574px;
+        width: 100%;
+        padding-top: 30px;
+ }
+
+.main-section__sliders {
+    max-width: 610px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.btn {
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+.slider-btn {
+    width: 120px;
+    height: 120px;
+    background-color: var(--bg-cream);
+    border-radius: 50%;
+    padding-left: 34px;
+    padding-top: 6px;
+    position: absolute;
+    z-index: 2;
+    top: 64%;
+    transform: translateX(434%);
+
+}
+
+.slider-btn:hover {
+    background-color: rgba(255, 244, 235, 0.6);
+}
+
+.main-section__title {
+    font-weight:bold;
+    font-size: 90px;
+    line-height: 90px;
+    color: var(--color-black);
+ }
+
+.main-section__text {
+    max-width: 507px;
+    width: 100%;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    color: var(--color-graffit);
+ }
+
+
+.main-section__button {
+    color: #FFF4EB;
+    padding: 15px 40px;
+    background-color: #303030;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.main-section__button:hover {
+    border:  solid 2px #303030;
+    color: #303030;
+    background-color: #FFF4EB;
+
+}
+
+
+/* ------------------Стилі бургера------------------ */
+#menuToggle {
+    display: block;
+    position: relative;
+    /* top: 50px;
+    left: 50px;
+
+    z-index: 1; */
+
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuToggle a {
+    text-decoration: none;
+    color: #FFF4EB;
+
+    transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+    text-decoration: underline;
+}
+
+
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+
+    cursor: pointer;
+
+    opacity: 0;
+    /* hide this */
+    z-index: 2;
+    /* and place it over the hamburger */
+
+    -webkit-touch-callout: none;
+}
+
+/* Just a quick hamburger */
+#menuToggle span.short {
+    width: 18px;
+}
+
+#menuToggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: #303030;
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 2px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+/*Transform all the slices of hamburger into a crossmark.*/
+#menuToggle input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+}
+
+/*But let's hide the middle one.*/
+#menuToggle input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*Ohyeah and the last one should go the other direction*/
+#menuToggle input:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -0.5px);
+}
+
+/*Make this absolute positioned at the top left of the screen*/
+#menu {
+    position: absolute;
+    width: 250px;
+    /* margin: -6.25rem 0 0 -7.5rem; */
+    padding: 50px;
+    padding-top: 60px;
+
+    background: #CA9277;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+
+    transform-origin: 0% 0%;
+    transform: translate(-150%, 0);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+    padding: 10px 0;
+    font-size: 22px;
+}
+
+/* And let's slide it in from the left */
+#menuToggle input:checked~ul {
+    transform: none;
+}
