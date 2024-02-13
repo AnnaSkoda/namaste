@@ -14,7 +14,7 @@
 :root{
 /*------------------Font-family------------------------------*/
 --ff-excon: 'Excon', sans-serif;
---ff-ranade: 'Rosario', sans-serif;
+--ff-ranade: 'Ranade', sans-serif;
 
 /* ------------------ Colors ------------------ */
 --color-black:#000000;
@@ -83,7 +83,7 @@ button {
 
 /* ------------------Main style------------------------ */
 body {
-    background: #FFF4EB;
+    background: var(--bg-cream);
     color: #303030;
     font-family: var(--ff-excon);
     font-size: 18px;
@@ -94,8 +94,9 @@ body {
 }
 
 .wrapper {
-    max-width: 1440px;
+    /* max-width: 1440px; */
     margin: 0 auto;
+    
 }
 
 /*--------Налаштування адаптиву-----------------------*/
@@ -108,167 +109,70 @@ body {
 
 /*----------Модулі-----------------------------------*/
 .title {
-    line-height: 130%;
-    font-size: 30px;
-    margin-bottom: 45px;
-}
-
-.title--dark {
-    color: #222f33;
-}
-
-@media (max-width: 47.9988em) {
-    .title {
-        font-size: 24px;
-    }
+    width: 100%;
+    padding-bottom: 40px;
+    font-size: 64px;
+    font-family: var(--ff-ranade), sans-serif;
+    font-weight: 500;
+    line-height: 64px;
 }
 
 .text {
-    line-height: 185%;
-    margin-bottom: 45px;
+    width: 100%;
+    padding-bottom: 55px;
+    font-size: 18px;
+    font-family: var(--ff-excon), sans-serif;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1px;
 }
 
 /*---------Загальні стилі--------------------------------------------*/
 .page {
     flex: 1 1 auto;
+    
 }
 /*----------------------Header-------------------------*/
 .header {
-    border-bottom:  solid 0.5px #CA9277;
+    height: 104px;  
 }
+
+.header__fixed {
+    background: var(--bg-cream);
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    left: 0;
+    border-bottom: solid 0.5px #CA9277;
+    
+}
+
 .header__container {
     display: flex;
-    position: relative;
     z-index: 2;
-    gap: 20px;
     justify-content: space-between;
     align-items: center;
     padding-top: 5px;
     padding-bottom: 5px;
-    min-height: 104px;
-    
+    height: 104px;    
 }
 
 .header__logo img {
     width: 45px;
 }
 
-.header__cart {
+.header-link {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 60px;
 }
 
-
-/*------------------Main-section--------------------*/
-/* 
-.main-section {
-    position: relative;
-    display: flex;
-} */
-.page__main {
-    padding: 112px 0;
+.cart {
+    width: 18px;
+    height: 20px;
 }
-
-.main-section {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    
-    
-}
-
-.main-section:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    bottom: 0;
-    right: 0;
-    height: 100%;
-    background-color: #CA9277;
-    width: 41%;
-    /* 492/1200 */
-}
-
-.main-section__container {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 45px;
-}
-
-.main-section__content{
-        max-width: 574px;
-        width: 100%;
-        padding-top: 30px;
- }
-
-.main-section__sliders {
-    max-width: 610px;
-    width: 100%;
-    margin: 0 auto;
-}
-
-.btn {
-    border: none;
-    background: transparent;
-    outline: none;
-}
-
-.slider-btn {
-    width: 120px;
-    height: 120px;
-    background-color: var(--bg-cream);
-    border-radius: 50%;
-    padding-left: 34px;
-    padding-top: 6px;
-    position: absolute;
-    z-index: 2;
-    top: 64%;
-    transform: translateX(434%);
-
-}
-
-.slider-btn:hover {
-    background-color: rgba(255, 244, 235, 0.6);
-}
-
-.main-section__title {
-    font-weight:bold;
-    font-size: 90px;
-    line-height: 90px;
-    color: var(--color-black);
- }
-
-.main-section__text {
-    max-width: 507px;
-    width: 100%;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 20px;
-    margin-top: 30px;
-    margin-bottom: 60px;
-    color: var(--color-graffit);
- }
-
-
-.main-section__button {
-    color: #FFF4EB;
-    padding: 15px 40px;
-    background-color: #303030;
-    border-radius: 10px;
-    transition: all 0.3s;
-}
-
-.main-section__button:hover {
-    border:  solid 2px #303030;
-    color: #303030;
-    background-color: #FFF4EB;
-
-}
-
 
 /* ------------------Стилі бургера------------------ */
 #menuToggle {
@@ -285,7 +189,7 @@ body {
 
 #menuToggle a {
     text-decoration: none;
-    color: #FFF4EB;
+    color: var(--bg-cream);
 
     transition: color 0.3s ease;
 }
@@ -306,14 +210,10 @@ body {
     cursor: pointer;
 
     opacity: 0;
-    /* hide this */
     z-index: 2;
-    /* and place it over the hamburger */
-
     -webkit-touch-callout: none;
 }
 
-/* Just a quick hamburger */
 #menuToggle span.short {
     width: 18px;
 }
@@ -377,7 +277,7 @@ body {
     /* to stop flickering of text in safari */
 
     transform-origin: 0% 0%;
-    transform: translate(-150%, 0);
+    transform: translate(-500%, 0);
 
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 }
@@ -390,4 +290,225 @@ body {
 /* And let's slide it in from the left */
 #menuToggle input:checked~ul {
     transform: none;
+}
+
+
+/*------------------Main-section--------------------*/
+
+.started-section {
+    position: relative;
+}
+
+.started-section:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    right: 0;
+    background-color: var(--bg-dark-cream);
+    width: 41%;
+}
+
+.started-section__container {
+    display: flex;
+    padding: 112px 0;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 45px;
+}
+
+.started-section__sliders {
+    max-width: 610px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.btn {
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+.slider-btn {
+    width: 120px;
+    height: 120px;
+    background-color: var(--bg-cream);
+    border-radius: 50%;
+    padding-left: 34px;
+    padding-top: 6px;
+    position: absolute;
+    z-index: 2;
+    top: 64%;
+    transform: translateX(458%);
+
+}
+
+.slider-btn:hover {
+    background-color: rgba(255, 244, 235, 0.6);
+}
+
+.started-section__title {
+    max-width: 559px;
+    color: var(--color-black);
+    font-size: 72px;
+    font-family: var(--ff-ranade), sans-serif;
+    font-weight: 700;
+    line-height: 72px;
+
+ }
+
+.started-section__text {
+    max-width: 507px;
+    color: var(--color-graffit);
+ }
+
+
+.button {
+    color: #FFF4EB;
+    padding: 15px 40px;
+    background-color: #303030;
+    border-radius: 10px;
+    transition: all 0.3s;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    border:  solid 2px #303030;
+    color: #303030;
+    background-color: #FFF4EB;
+
+}
+
+/*------------------learn-section--------------------*/
+
+.learn {
+    background-color: var(--bg-graffit);
+
+}
+
+.learn-section__container {
+    padding-top: 143px;
+    padding-bottom: 190px;
+}
+
+.learn-section__title {
+    color: var(--bg-cream);
+    max-width: 488px;
+}
+
+.learn-section__text {
+    color: var(--bg-cream);
+    max-width: 793px;
+}
+
+.learn-section__sliders {
+    width: 1200px;
+
+}
+
+.video-slider-wrapper img{
+    width: 380px;
+    height: 214px;
+    border-radius: 10px;
+}
+
+.video-name {
+    color: var(--bg-cream);
+    padding-top: 30px;
+    gap: 11px;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 18px;
+}
+
+.video-description {
+    color: var(--bg-dark-cream);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 12px;
+    text-transform: lowercase;
+}
+
+.btn-learn {
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+.slider-btn-learn {
+    width: 44px;
+    height: 44px;
+    background-color: var(--bg-cream);
+    border-radius: 50%;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    top: 104%;
+
+}
+
+.slider-btn-learn:hover {
+    background-color: var(--bg-dark-cream);
+}
+
+.slider-next-video {
+    left:7%;
+    padding-left: 18px;
+}
+.slider-prev-video {
+    padding-left: 15px;
+}
+
+/*------------------lifestyle-section--------------------*/
+.lifestyle-section {
+    position: relative;
+}
+
+.lifestyle-section:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    background-color: var(--bg-dark-cream);
+    width: 41%;
+}
+
+.lifestyle-section__container {
+    padding: 123px 0 192px;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 30px;
+    position: relative;
+
+
+}
+
+.lifestyle-section__content {
+    max-width: 548px;
+    padding-top: 79px;
+
+}
+
+.lifestyle-section__title {
+    color: var(--color-black);
+}
+
+.lifestyle-section__image2 {
+    max-width: 353px;
+    width: 100%;
+    max-height: 440px; 
+    position: relative;
+}
+
+.lifestyle-section__image1 {
+    max-width: 353px;
+    max-height: 440px;
+    position: absolute;
+    z-index: 2;
+    left: 19%;
+    top: 26%;
+   
 }
