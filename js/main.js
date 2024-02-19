@@ -19,4 +19,14 @@ $(document).ready(function () {
         prevArrow: '<button class="btn-learn slider-btn-learn slider-prev-video"><img src="img/svg/arrow-left.svg" alt="arrow-left" /></button>',
         nextArrow: '<button class="btn-learn slider-btn-learn slider-next-video"><img src="img/svg/arrow-right.svg" alt="arrow-right" /></button>',
     })
+
+    $('.comments-sliders').slick({
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+
+        prevArrow: '<button class="btn-comments slider-btn-comments slider-prev-comments"><img src="img/svg/arrow-left.svg" alt="arrow-left" /></button>',
+        nextArrow: '<button class="btn-comments slider-btn-comments slider-next-comments"><img src="img/svg/arrow-right.svg" alt="arrow-right" /></button>',
+    })
 });s
