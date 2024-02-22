@@ -574,9 +574,6 @@ body {
 }
 
 /*------------------Courses-section--------------------*/
-.courses {}
-
-.courses-section {}
 
 .courses-section__container {
     padding: 110px 0 100px;
@@ -809,9 +806,6 @@ body {
     width: 100%;
     left: 0;
 }
-
-
-.footer-link {}
 
 /*------------------Copyright--------------------*/
 .copyright{
