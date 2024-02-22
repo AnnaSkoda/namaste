@@ -34,7 +34,7 @@
               </nav>
             </div>
             <div class="header__logo">
-              <img src="img/logo.png" alt="logo" />
+              <a href=""><img src="img/logo.png" alt="logo" /></a>
             </div>
             <a href="#" class="header-link">
               <img class="cart" src="img/svg/cart.svg" alt="cart" />
@@ -53,7 +53,7 @@
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna,
                   porttitor rhoncus dolor purus non enim praesent
                 </p>
-                <a href="" class="started-section__button button">GET STARTED</a>
+                <a href="#" class="started-section__button button">Get started</a>
               </div>
               <div class="started-section__sliders sliders">
                 <div class="slider-block">
@@ -82,31 +82,46 @@
             <div class="learn-section__sliders video-sliders">
               <div class="video-slider-block">
                 <div class="video-slider-wrapper">
-                  <img src="img/2learn/Morning routine for beginners.jpg" alt="yoga-video1" />
+                  <video class="video-section__videos" poster="img/2learn/Morning routine for beginners.jpg">
+                    <source src="img/2learn/Morning routine for beginners video.mp4" type="video/mp4" />
+                  </video>
+                  <div><div class="custom-video__control">▶</div></div>
                   <p class="video-name text">Morning routine for beginners<span class="video-description">30 MINS • RELAXATION & STRETCHING</span></p>
                 </div>
               </div>
               <div class="video-slider-block">
                 <div class="video-slider-wrapper">
-                  <img src="img/2learn/Yoga in house.jpg" alt="yoga-video2" />
+                  <video class="video-section__videos" poster="img/2learn/Yoga in house.jpg">
+                    <source src="img/2learn/Yoga in house video.mp4" type="video/mp4" />
+                  </video>
+                  <div class="custom-video__control">▶</div>
                   <p class="video-name text">Yoga in house<span class="video-description">30 MINS • RELAXATION & STRETCHING</span></p>
                 </div>
               </div>
               <div class="video-slider-block">
                 <div class="video-slider-wrapper">
-                  <img src="img/2learn/Balance yoga.jpg" alt="yoga-video3" />
+                  <video class="video-section__videos" poster="img/2learn/Balance yoga.jpg">
+                    <source src="img/2learn/Balance yoga video.mp4" type="video/mp4" />
+                  </video>
+                  <div class="custom-video__control">▶</div>
                   <p class="video-name text">Balance yoga<span class="video-description">30 MINS • RELAXATION & STRETCHING</span></p>
                 </div>
               </div>
               <div class="video-slider-block">
                 <div class="video-slider-wrapper">
-                  <img src="img/2learn/Yoga on beach.jpg" alt="yoga-video4" />
+                  <video class="video-section__videos" poster="img/2learn/Yoga on beach.jpg">
+                    <source src="img/2learn/Yoga on beach video.mp4" type="video/mp4" />
+                  </video>
+                  <div class="custom-video__control">▶</div>
                   <p class="video-name text">Yoga on beach<span class="video-description">30 MINS • RELAXATION & STRETCHING</span></p>
                 </div>
               </div>
               <div class="video-slider-block">
                 <div class="video-slider-wrapper">
-                  <img src="img/2learn/pexels-chevanon-photography-317155.jpg" alt="yoga-video5" />
+                  <video class="video-section__videos" poster="img/2learn/studio yoga.jpg">
+                    <source src="img/2learn/studio yoga video.mp4" type="video/mp4" />
+                  </video>
+                  <div class="custom-video__control">▶</div>
                   <p class="video-name text">Studio yoga<span class="video-description">30 MINS • RELAXATION & STRETCHING</span></p>
                 </div>
               </div>
@@ -170,10 +185,11 @@
         <section class="video">
           <div class="video-section">
             <div class="video-section__container">
-              <video controls loop poster="img/5video/poster_video.jpg">
+              <video class="video-section__video" poster="img/5video/poster_video.jpg">
                 <source src="img/5video/video_1080p.webm" type="video/webm" />
                 <source src="img/5video/video_1080p.mp4" type="video/mp4" />
               </video>
+              <img class="play-button" src="img/svg/play-button.svg" alt="Play" />
             </div>
           </div>
         </section>
@@ -198,8 +214,8 @@
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia saepe ipsum assumenda maiores voluptatibus corporis
                     </p>
                     <div class="comment-author">
-                      <img src="img/6comments/photoCEO.png" alt="photoCEO" />
-                      <p class="comment-name">Manya Bansal <span>CEO</span></p>
+                      <img src="img/6comments/photoTeacher.jpg" alt="photoTeacher" />
+                      <p class="comment-name">Antony Lee <span>Teacher</span></p>
                     </div>
                   </div>
                 </div>
@@ -207,8 +223,8 @@
                   <div class="slider-wrapper">
                     <p class="slider-text">I've been to a few different places before but nothing compares to this.</p>
                     <div class="comment-author">
-                      <img src="img/6comments/photoCEO.png" alt="photoCEO" />
-                      <p class="comment-name">Manya Bansal <span>CEO</span></p>
+                      <img src="img/6comments/photoDesigner.jpg" alt="photoDesigner" />
+                      <p class="comment-name">Anna Kay <span>Designer</span></p>
                     </div>
                   </div>
                 </div>
@@ -220,7 +236,7 @@
       <footer class="footer">
         <div class="footer__container footer-wrapper">
           <div class="footer-block">
-            <span class="footer-logo"><img src="img/logo.png" alt="logo" /></span>
+            <a href="#" class="footer-logo"><img src="img/logo.png" alt="logo" /></a>
             <p class="footer-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam</p>
             <ul class="footer-social">
               <li>

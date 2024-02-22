@@ -29,4 +29,62 @@ $(document).ready(function () {
         prevArrow: '<button class="btn-comments slider-btn-comments slider-prev-comments"><img src="img/svg/arrow-left.svg" alt="arrow-left" /></button>',
         nextArrow: '<button class="btn-comments slider-btn-comments slider-next-comments"><img src="img/svg/arrow-right.svg" alt="arrow-right" /></button>',
     })
-});s
+});
+
+document.querySelectorAll('.video-section__container')
+    
+    .forEach(div => {
+        
+        const video = div.querySelector('video');
+        const bplay = div.querySelector('img');
+ 
+        video.addEventListener('click', ev => {
+
+            if (video.paused) return;
+            video.pause();
+            bplay.classList.remove('hidden');
+
+        })
+ 
+        video.addEventListener('ended', ev => {
+
+            video.currentTime = 0;
+            bplay.classList.remove('hidden');
+
+        })
+
+        bplay.addEventListener('click', ev => {
+
+            if (!video.paused) return;
+            video.play().then(() => { bplay.classList.add('hidden'); })
+            
+        })
+
+    });
+
+    document.querySelectorAll('.video-slider-wrapper')
+    
+    .forEach(div => {
+        
+        const video = div.querySelector('video');
+        const bplay = div.querySelector('div');
+ 
+        video.addEventListener('click', ev => {
+            if (video.paused) return;
+            video.pause();
+            bplay.classList.remove('hidden');
+        })
+ 
+        video.addEventListener('ended', ev => {
+            video.currentTime = 0;
+            bplay.classList.remove('hidden');
+        })
+
+        bplay.addEventListener('click', ev => {
+            if (! video.paused) return;
+            video.play().then(() => { bplay.classList.add('hidden'); }) 
+        })
+
+    })
+
+

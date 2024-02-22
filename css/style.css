@@ -61,6 +61,8 @@ img {
 
 ul li {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 h1,
@@ -73,12 +75,14 @@ h6 {
 }
 
 button {
+    padding: 0;
     line-height: inherit;
     font-weight: inherit;
     font-size: inherit;
     cursor: pointer;
     color: inherit;
     background-color: transparent;
+    
 }
 
 /* ------------------Main style------------------------ */
@@ -127,6 +131,10 @@ body {
     letter-spacing: -1px;
 }
 
+.hidden {
+    display: none;
+}
+
 /*---------Загальні стилі--------------------------------------------*/
 .page {
     flex: 1 1 auto;
@@ -159,7 +167,7 @@ body {
 }
 
 .header__logo img {
-    width: 45px;
+    width: 83px;
 }
 
 .header-link {
@@ -178,26 +186,13 @@ body {
 #menuToggle {
     display: block;
     position: relative;
-    /* top: 50px;
-    left: 50px;
-
-    z-index: 1; */
-
     -webkit-user-select: none;
     user-select: none;
 }
 
 #menuToggle a {
-    text-decoration: none;
     color: var(--bg-cream);
-
-    transition: color 0.3s ease;
 }
-
-#menuToggle a:hover {
-    text-decoration: underline;
-}
-
 
 #menuToggle input {
     display: block;
@@ -206,9 +201,7 @@ body {
     position: absolute;
     top: -7px;
     left: -5px;
-
     cursor: pointer;
-
     opacity: 0;
     z-index: 2;
     -webkit-touch-callout: none;
@@ -224,14 +217,10 @@ body {
     height: 2px;
     margin-bottom: 5px;
     position: relative;
-
-    background: #303030;
+    background: var(--bg-graffit);
     border-radius: 3px;
-
     z-index: 1;
-
     transform-origin: 2px 0px;
-
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
         background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
         opacity 0.55s ease;
@@ -266,25 +255,38 @@ body {
 /*Make this absolute positioned at the top left of the screen*/
 #menu {
     position: absolute;
-    width: 250px;
-    /* margin: -6.25rem 0 0 -7.5rem; */
-    padding: 50px;
-    padding-top: 60px;
-
+    padding: 50px 100px 50px 50px;
     background: #CA9277;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
-    /* to stop flickering of text in safari */
-
     transform-origin: 0% 0%;
     transform: translate(-500%, 0);
-
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 }
 
+
 #menu li {
-    padding: 10px 0;
-    font-size: 22px;
+    padding-top: 30px;
+    font-size: 22px;  
+    position: relative;
+}
+
+#menu li:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    background: var(--bg-cream);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+#menu li:hover:after {
+    width: 100%;
+    left: 0;
 }
 
 /* And let's slide it in from the left */
@@ -322,16 +324,11 @@ body {
     margin: 0 auto;
 }
 
-.btn {
-    border: none;
-    background: transparent;
-    outline: none;
-}
-
 .slider-btn {
     width: 120px;
     height: 120px;
     background-color: var(--bg-cream);
+    border: none;
     border-radius: 50%;
     padding-left: 34px;
     padding-top: 6px;
@@ -359,22 +356,25 @@ body {
 .started-section__text {
     max-width: 507px;
     color: var(--color-graffit);
+    padding-top: 50px;
  }
 
 
 .button {
-    color: #FFF4EB;
+    color: var(--bg-cream);
     padding: 15px 40px;
-    background-color: #303030;
+    background-color: var(--bg-graffit);
     border-radius: 10px;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
     text-transform: uppercase;
+    border: none;
 }
 
 .button:hover {
-    border:  solid 2px #303030;
+    /* border:  solid 2px var(--bg-graffit); */
+    box-shadow: inset 0 0 0 1px var(--bg-graffit);
     color: #303030;
-    background-color: #FFF4EB;
+    background-color: var(--bg-cream);
 
 }
 
@@ -405,11 +405,29 @@ body {
 
 }
 
-.video-slider-wrapper img{
+.video-section__videos{
     width: 380px;
     height: 214px;
     border-radius: 10px;
+    position: relative;
 }
+
+.custom-video__control {
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+    top: 23%;
+    transform: translateX(240%);
+    border: 1px solid var(--bg-cream);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--bg-cream);
+    width: 64px;
+    height: 64px;
+}
+
 
 .video-name {
     color: var(--bg-cream);
@@ -483,7 +501,6 @@ body {
     gap: 30px;
     position: relative;
 
-
 }
 
 .lifestyle-section__content {
@@ -540,7 +557,6 @@ body {
 
 .discover-section {
     background-color: var(--bg-graffit);
-
 }
 
 .discover-section__container {
@@ -549,8 +565,6 @@ body {
     align-items: center;
     flex-direction: column;
     text-align: center;
-
-
 }
 
 .discover-section__title {
@@ -568,9 +582,10 @@ body {
 }
 
 .discover-section__btn.button:hover {
-        border: solid 2px var(--bg-dark-cream);
-        color: var(--bg-cream);
-        background-color: var(--color-graffit) ;
+    /* border: solid 2px var(--bg-dark-cream);*/
+    box-shadow: inset 0 0 0 1px var(--bg-dark-cream);
+    color: var(--bg-cream);
+    background-color: var(--color-graffit);
 }
 
 /*------------------Courses-section--------------------*/
@@ -619,8 +634,25 @@ body {
     aspect-ratio: 177.777778%; /* 16/9 !!!!!*/
     border-radius: 10px;
     border: 1px;
+    position: relative;
 
 }
+
+.play-button {
+    position: absolute;
+    cursor: pointer;
+    width: 120px;
+    height: 120px;
+    color: var(--bg-dark-cream);
+    bottom: 40%;
+    z-index: 2;
+}
+
+.play-button:hover {
+    color: var(--bg-graffit);
+}
+
+
 
 /*------------------Comments-section--------------------*/
 
@@ -664,6 +696,13 @@ body {
     gap: 17px;
     padding-top: 86px;
 }
+
+.comment-author img {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+}
+
    
 .comment-name{
     color: var(--bg-cream);
@@ -738,7 +777,7 @@ body {
     line-height: 27px;
 }
 
-.footer-logo img{
+.footer-logo {
     max-width: 135px;
     width: 100%;
     max-height: 70px;
@@ -747,10 +786,12 @@ body {
 
 .footer-text {
     padding: 28px 0 40px;
-    font-size: 16px;
+    color: var(--bg-graffit);
     font-family: var(--ff-ranade), sans-serif;
+    font-size: 16px;
     font-weight: 400;
     line-height: 16px;
+    
 }
 
 
@@ -789,6 +830,7 @@ body {
 .footer-link {
     position: relative;
 }
+
 .footer-link:after {
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
