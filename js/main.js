@@ -8,6 +8,7 @@ $(document).ready(function () {
         slidesToScroll: 1,
 
         nextArrow: '<button class="btn slider-btn slider-next"><img src="img/svg/arrow-down.svg" alt="arrow-down" /></button>',
+
     })
 
     $('.video-sliders').slick({
@@ -18,6 +19,28 @@ $(document).ready(function () {
 
         prevArrow: '<button class="btn-learn slider-btn-learn slider-prev-video"><img src="img/svg/arrow-left.svg" alt="arrow-left" /></button>',
         nextArrow: '<button class="btn-learn slider-btn-learn slider-next-video"><img src="img/svg/arrow-right.svg" alt="arrow-right" /></button>',
+
+        
+        responsive: [
+        {
+            breakpoint: 1221,
+            settings: {
+                infinite: true,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                // dots:true,
+            }
+            },
+        {
+            breakpoint: 769,
+            settings: {
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                // dots:true,
+            }
+            },
+        ]
     })
 
     $('.comments-sliders').slick({
@@ -30,6 +53,7 @@ $(document).ready(function () {
         nextArrow: '<button class="btn-comments slider-btn-comments slider-next-comments"><img src="img/svg/arrow-right.svg" alt="arrow-right" /></button>',
     })
 });
+
 
 document.querySelectorAll('.video-section__container')
     

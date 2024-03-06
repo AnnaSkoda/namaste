@@ -7,131 +7,139 @@
 
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/slick.css" />
-    <!-- <link rel="stylesheet" href="css/media.css" /> -->
+    <link rel="stylesheet" href="css/media.css" />
 
     <title>namaste</title>
   </head>
   <body>
     <div class="wrapper">
-      <header class="header">
-        <div class="header__fixed">
-          <div class="header__container">
-            <div class="header__burger">
-              <nav role="navigation">
-                <div id="menuToggle">
-                  <input type="checkbox" />
-                  <span></span>
-                  <span class="short"></span>
-                  <span></span>
+    <header class="header header__fixed">
+      <div class="header__container">
+        <div class="header__burger">
+          <nav role="navigation">
+            <div id="menuToggle">
+              <input type="checkbox" />
+              <span></span>
+              <span class="short"></span>
+              <span></span>
 
-                  <ul id="menu">
-                    <a href="#"><li>Home</li></a>
-                    <a href="#"><li>About</li></a>
-                    <a href="#"><li>Support</li></a>
-                    <a href="#"><li>Contact</li></a>
-                  </ul>
-                </div>
-              </nav>
+              <ul id="menu">
+                <a href="#"><li>Home</li></a>
+                <a href="#"><li>About</li></a>
+                <a href="#"><li>Support</li></a>
+                <a href="#"><li>Contact</li></a>
+              </ul>
             </div>
-            <div class="header__logo">
-              <a href=""><img src="img/logo.png" alt="logo" /></a>
+          </nav>
+        </div>
+        <div class="header__logo">
+          <a href=""><img src="img/logo.png" alt="logo" /></a>
+        </div>
+        <a href="#" class="header-link">
+          <img class="cart" src="img/svg/cart.svg" alt="cart" />
+          <p class="header__cart">Cart</p>
+        </a>
+      </div>
+    </header>
+    <main class="page">
+      <section class="started">
+        <div class="started-section">
+          <div class="started-section__container">
+            <div class="started-section__content">
+              <h1 class="started-section__title">Relax. Recline. Wind Down.</h1>
+              <p class="started-section__text text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna,
+                porttitor rhoncus dolor purus non enim praesent
+              </p>
+              <a href="#" class="started-section__button button">Get started</a>
             </div>
-            <a href="#" class="header-link">
-              <img class="cart" src="img/svg/cart.svg" alt="cart" />
-              <p class="header__cart">Cart</p>
-            </a>
+            <div class="started-section__sliders sliders">
+              <div class="slider-block">
+                <div class="slider-wrapper"><img src="img/1started/1.jpg" alt="girl1" /></div>
+              </div>
+              <div class="slider-block">
+                <div class="slider-wrapper"><img src="img/1started/2.jpg" alt="girl2" /></div>
+              </div>
+              <div class="slider-block">
+                <div class="slider-wrapper"><img src="img/1started/3.jpg" alt="girl3" /></div>
+              </div>
+            </div>
           </div>
         </div>
-      </header>
-      <main class="page">
-        <section class="started">
-          <div class="started-section">
-            <div class="started-section__container">
-              <div class="started-section__content">
-                <h1 class="started-section__title">Relax. Recline. Wind Down.</h1>
-                <p class="started-section__text text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna,
-                  porttitor rhoncus dolor purus non enim praesent
-                </p>
-                <a href="#" class="started-section__button button">Get started</a>
+      </section>
+
+      <section class="learn">
+        <div class="learn-section__container">
+          <div class="learn-section__content">
+            <h2 class="learn-section__title title">Learn with us</h2>
+            <p class="learn-section__text text">
+              But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete
+              account of the system.
+            </p>
+          </div>
+          <div class="learn-section__sliders video-sliders">
+            <div class="video-slider-block">
+              <div class="video-slider-wrapper">
+                <video class="video-section__videos" poster="img/2learn/Morning routine for beginners.jpg">
+                  <source src="img/2learn/Morning routine for beginners video.mp4" type="video/mp4" />
+                </video>
+                <div><div class="custom-video__control">▶</div></div>
+                <p class="video-name text">Morning routine for beginners<span class="video-description">30 MINS • RELAXATION & STRETCHING</span></p>
               </div>
-              <div class="started-section__sliders sliders">
-                <div class="slider-block">
-                  <div class="slider-wrapper"><img src="img/1started/1.jpg" alt="girl1" /></div>
-                </div>
-                <div class="slider-block">
-                  <div class="slider-wrapper"><img src="img/1started/2.jpg" alt="girl2" /></div>
-                </div>
-                <div class="slider-block">
-                  <div class="slider-wrapper"><img src="img/1started/3.jpg" alt="girl3" /></div>
-                </div>
+            </div>
+            <div class="video-slider-block">
+              <div class="video-slider-wrapper">
+                <video class="video-section__videos" poster="img/2learn/Yoga in house.jpg">
+                  <source src="img/2learn/Yoga in house video.mp4" type="video/mp4" />
+                </video>
+                <div class="custom-video__control">▶</div>
+                <p class="video-name text">Yoga in house<span class="video-description">30 MINS • RELAXATION & STRETCHING</span></p>
+              </div>
+            </div>
+            <div class="video-slider-block">
+              <div class="video-slider-wrapper">
+                <video class="video-section__videos" poster="img/2learn/Balance yoga.jpg">
+                  <source src="img/2learn/Balance yoga video.mp4" type="video/mp4" />
+                </video>
+                <div class="custom-video__control">▶</div>
+                <p class="video-name text">Balance yoga<span class="video-description">30 MINS • RELAXATION & STRETCHING</span></p>
+              </div>
+            </div>
+            <div class="video-slider-block">
+              <div class="video-slider-wrapper">
+                <video class="video-section__videos" poster="img/2learn/Yoga on beach.jpg">
+                  <source src="img/2learn/Yoga on beach video.mp4" type="video/mp4" />
+                </video>
+                <div class="custom-video__control">▶</div>
+                <p class="video-name text">Yoga on beach<span class="video-description">30 MINS • RELAXATION & STRETCHING</span></p>
+              </div>
+            </div>
+            <div class="video-slider-block">
+              <div class="video-slider-wrapper">
+                <video class="video-section__videos" poster="img/2learn/studio yoga.jpg">
+                  <source src="img/2learn/studio yoga video.mp4" type="video/mp4" />
+                </video>
+                <div class="custom-video__control">▶</div>
+                <p class="video-name text">Studio yoga<span class="video-description">30 MINS • RELAXATION & STRETCHING</span></p>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="learn">
-          <div class="learn-section__container">
-            <div class="learn-section__content">
-              <h2 class="learn-section__title title">Learn with us</h2>
-              <p class="learn-section__text text">
-                But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete
-                account of the system.
-              </p>
-            </div>
-            <div class="learn-section__sliders video-sliders">
-              <div class="video-slider-block">
-                <div class="video-slider-wrapper">
-                  <video class="video-section__videos" poster="img/2learn/Morning routine for beginners.jpg">
-                    <source src="img/2learn/Morning routine for beginners video.mp4" type="video/mp4" />
-                  </video>
-                  <div><div class="custom-video__control">▶</div></div>
-                  <p class="video-name text">Morning routine for beginners<span class="video-description">30 MINS • RELAXATION & STRETCHING</span></p>
-                </div>
-              </div>
-              <div class="video-slider-block">
-                <div class="video-slider-wrapper">
-                  <video class="video-section__videos" poster="img/2learn/Yoga in house.jpg">
-                    <source src="img/2learn/Yoga in house video.mp4" type="video/mp4" />
-                  </video>
-                  <div class="custom-video__control">▶</div>
-                  <p class="video-name text">Yoga in house<span class="video-description">30 MINS • RELAXATION & STRETCHING</span></p>
-                </div>
-              </div>
-              <div class="video-slider-block">
-                <div class="video-slider-wrapper">
-                  <video class="video-section__videos" poster="img/2learn/Balance yoga.jpg">
-                    <source src="img/2learn/Balance yoga video.mp4" type="video/mp4" />
-                  </video>
-                  <div class="custom-video__control">▶</div>
-                  <p class="video-name text">Balance yoga<span class="video-description">30 MINS • RELAXATION & STRETCHING</span></p>
-                </div>
-              </div>
-              <div class="video-slider-block">
-                <div class="video-slider-wrapper">
-                  <video class="video-section__videos" poster="img/2learn/Yoga on beach.jpg">
-                    <source src="img/2learn/Yoga on beach video.mp4" type="video/mp4" />
-                  </video>
-                  <div class="custom-video__control">▶</div>
-                  <p class="video-name text">Yoga on beach<span class="video-description">30 MINS • RELAXATION & STRETCHING</span></p>
-                </div>
-              </div>
-              <div class="video-slider-block">
-                <div class="video-slider-wrapper">
-                  <video class="video-section__videos" poster="img/2learn/studio yoga.jpg">
-                    <source src="img/2learn/studio yoga video.mp4" type="video/mp4" />
-                  </video>
-                  <div class="custom-video__control">▶</div>
-                  <p class="video-name text">Studio yoga<span class="video-description">30 MINS • RELAXATION & STRETCHING</span></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="lifestyle">
+      <section class="lifestyle">
           <div class="lifestyle-section">
             <div class="lifestyle-section__container">
+              <div class="images-container">
+                <div class="lifestyle-section__images">
+                  <div class="lifestyle-section__images-top">
+                    <img class="lifestyle-section__image1" src="img/3lifestyle/yoga-girl1.jpg" alt="yoga-girl1" />
+                  </div>
+                  <div class="lifestyle-section__images-bottom">
+                    <img class="lifestyle-section__image2" src="img/3lifestyle/yoga-girl2.jpg" alt="yoga-girl2" />
+                  </div>
+              </div>
+              </div>
               <div class="lifestyle-section__content">
                 <h3 class="lifestyle-section__title title">Healthy lifestyle with yoga.</h3>
                 <p class="lifestyle-section__text text">
@@ -140,15 +148,11 @@
                 </p>
                 <button class="lifestyle-section__btn button">About us</button>
               </div>
-              <div class="lifestyle-section__images">
-                <img class="lifestyle-section__image1" src="img/3lifestyle/yoga-girl1.jpg" alt="yoga-girl1" />
-                <img class="lifestyle-section__image2" src="img/3lifestyle/yoga-girl2.jpg" alt="yoga-girl2" />
-              </div>
             </div>
           </div>
         </section>
 
-        <section class="journey">
+      <section class="journey">
           <div class="journey-section">
             <div class="journey-section__container">
               <div class="journey-section__content">
@@ -163,15 +167,15 @@
           </div>
         </section>
 
-        <section class="discover">
+      <!-- <section class="discover">
           <div class="discover-section">
             <div class="discover-section__container">
               <h4 class="discover-section__title">Discover yourself through yoga</h4>
               <button class="discover-section__btn button">START YOUR JOURNEY</button>
             </div>
           </div>
-        </section>
-        <section class="courses">
+        </section> -->
+      <!-- <section class="courses">
           <div class="courses-section">
             <div class="courses-section__container">
               <h5 class="courses-section__title title">Explore our video courses today.</h5>
@@ -181,8 +185,8 @@
               <button class="courses-section__btn button">WATCH OUR ONLINE COURSES</button>
             </div>
           </div>
-        </section>
-        <section class="video">
+        </section> -->
+      <!-- <section class="video">
           <div class="video-section">
             <div class="video-section__container">
               <video class="video-section__video" poster="img/5video/poster_video.jpg">
@@ -192,8 +196,8 @@
               <img class="play-button" src="img/svg/play-button.svg" alt="Play" />
             </div>
           </div>
-        </section>
-        <section class="comments">
+        </section> -->
+      <!-- <section class="comments">
           <div class="comments-section">
             <div class="comments-section__container">
               <div class="comments-section__sliders comments-sliders">
@@ -231,9 +235,9 @@
               </div>
             </div>
           </div>
-        </section>
-      </main>
-      <footer class="footer">
+        </section> -->
+    </main>
+    <!-- <footer class="footer">
         <div class="footer__container footer-wrapper">
           <div class="footer-block">
             <a href="#" class="footer-logo"><img src="img/logo.png" alt="logo" /></a>
@@ -280,11 +284,11 @@
             </ul>
           </div>
         </div>
-      </footer>
-      <div class="copyright">
-        <p>Copyright @ Kartik Bansal 2022. All Rights Reserved.</p>
-      </div>
+      </footer> -->
+    <div class="copyright">
+      <p>Copyright @ Kartik Bansal 2022. All Rights Reserved.</p>
     </div>
+    <!-- </div> -->
 
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/slick.min.js"></script>
