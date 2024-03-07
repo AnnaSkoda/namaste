@@ -3,10 +3,6 @@
     width: 100%;
   }
 
-  /* .started-section__sliders {
-            width: 610px;
-        } */
-
   .slider-btn {
     transform: translateX(330%) translateY(-55%);
   }
@@ -41,6 +37,22 @@
   .lifestyle-section__images img {
     width: 345px;
   }
+
+  .journey-section__container {
+    padding: 185px 15px 167px 15px;
+  }
+
+  .journey-section__content {
+    max-width: 500px;
+  }
+
+  .comments-section__container {
+    padding: 133px 15px 120px 15px;
+  }
+
+  .footer__container {
+    padding: 120px 15px;
+  }
 }
 
 @media (max-width: 1131px) {
@@ -61,6 +73,23 @@
 
   .lifestyle-section__images img {
     width: 290px;
+  }
+
+  .journey-section__container {
+    padding: 135px 15px 117px 15px;
+  }
+
+  .journey-section__content {
+    max-width: 450px;
+  }
+
+  .video-section__container {
+    padding: 0 15px 0 15px;
+  }
+
+  .comments-section__container::before {
+    position: absolute;
+    content: "";
   }
 }
 
@@ -92,7 +121,7 @@
   }
 
   .text {
-    padding-top: 35px0;
+    padding-top: 35px;
     font-size: 15px;
   }
   .lifestyle-section__container {
@@ -101,6 +130,14 @@
 
   .lifestyle-section__images img {
     width: 250px;
+  }
+
+  .journey {
+    background-image: linear-gradient(to right, #fff4eb 41%, transparent 100%), url(/img/4journey/journey-girl.jpg);
+  }
+
+  .footer-block:first-child {
+    margin-right: 54px;
   }
 }
 
@@ -150,7 +187,7 @@
     flex-direction: column-reverse;
     justify-content: center;
     gap: 30px;
-    padding: 100px 15px 400px 15px;
+    padding: 100px 15px 425px 15px;
   }
 
   .lifestyle-section__content {
@@ -228,6 +265,32 @@
     left: 35%;
     padding-left: 15px;
   }
+
+  .journey-section__container {
+    padding: 115px 15px 100px 15px;
+  }
+
+  .discover-section__container {
+    padding: 110px 15px 100px 15px;
+  }
+
+  .discover-section__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .slider-text {
+    font-size: 42px;
+    line-height: 52px;
+  }
+
+  .footer-block:first-child {
+    margin-right: 54px;
+  }
+
+  .footer__container {
+    padding: 70px 15px;
+  }
 }
 
 @media (max-width: 590px) {
@@ -250,6 +313,34 @@
 
   .lifestyle-section__images-bottom {
     padding-left: 25px;
+  }
+
+  .journey {
+    background-image: none;
+  }
+
+  .journey-section__container {
+    padding: 100px 15px 75px 15px;
+  }
+
+  .discover-section__title {
+    font-size: 54px;
+    line-height: 54px;
+  }
+
+  .courses-section__container {
+    padding: 110px 15px 100px 15px;
+  }
+
+  .play-button {
+    max-width: 75px;
+    max-height: 75px;
+    bottom: 30%;
+  }
+
+  .slider-text {
+    font-size: 36px;
+    line-height: 46px;
   }
 }
 
@@ -302,5 +393,18 @@
 @media (max-width: 420px) {
   .video-section__videos {
     max-width: 290px;
+  }
+
+  .slider-text {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .comment-author img {
+    width: 56px;
+    height: 56px;
+  }
+  .slider-prev-comments {
+    right: 19%;
+    padding-left: 15px;
   }
 }
