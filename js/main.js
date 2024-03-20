@@ -86,7 +86,7 @@ document.querySelectorAll('.video-section__container')
 
     });
 
-    document.querySelectorAll('.video-slider-wrapper')
+document.querySelectorAll('.video-slider-wrapper')
     
     .forEach(div => {
         
@@ -105,10 +105,12 @@ document.querySelectorAll('.video-section__container')
         })
 
         bplay.addEventListener('click', ev => {
-            if (! video.paused) return;
-            video.play().then(() => { bplay.classList.add('hidden'); }) 
+            if (!video.paused) return;
+            video.play().then(() => { bplay.classList.add('hidden'); })
         })
 
-    })
+    });
+
+AOS.init(); 
 
 
